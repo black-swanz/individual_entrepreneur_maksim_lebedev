@@ -151,27 +151,12 @@ section{scroll-margin-top:12px}
 .btn:active{transform:translate(var(--offset),var(--offset));box-shadow:0 0 0 var(--lake)}
 
 /* ============ HERO ============ */
-.hero{padding:clamp(56px,9vw,112px) 0 clamp(56px,8vw,96px)}
-.hero-grid{display:grid;gap:clamp(40px,5vw,64px);align-items:center;grid-template-columns:minmax(0,1fr)}
-@media(min-width:960px){.hero-grid{grid-template-columns:1.15fr .85fr}}
+.hero{padding:clamp(64px,11vw,144px) 0 clamp(64px,10vw,128px)}
 .hero .kicker{margin-bottom:22px}
-.hero h1{margin-bottom:26px}
+.hero h1{margin-bottom:28px;font-size:clamp(44px,9vw,120px)}
 .hero .lead{max-width:30ch;color:var(--mist)}
 .hero .sub{display:block;margin-top:16px;color:var(--mist-60);font-size:13px}
 .row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:36px}
-
-/* terminal panel */
-.term{background:var(--deep);border:var(--rule);box-shadow:var(--offset) var(--offset) 0 var(--lake);min-width:0}
-.term-top{display:flex;justify-content:space-between;gap:12px;padding:10px 16px;border-bottom:var(--rule);color:var(--mist-60)}
-.term-top i{display:inline-block;width:9px;height:9px;background:var(--straw);margin-right:8px;vertical-align:1px}
-.term-body{padding:18px 18px 22px;font-family:var(--f-mono);font-size:13px;line-height:1.9}
-.term-cmd{color:var(--sky);margin-bottom:8px}
-.term-cmd b{color:var(--straw);font-weight:700;margin-right:8px}
-.term dl{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:18px}
-.term dt{color:var(--mist-60);text-transform:lowercase}
-.term dd{color:var(--mist);overflow-wrap:anywhere}
-.term dd.hl{color:var(--straw)}
-@media(max-width:420px){.term dl{grid-template-columns:minmax(0,1fr)}.term dd{margin-bottom:8px}}
 
 /* ============ SECTIONS ============ */
 .sec{padding:clamp(64px,9vw,112px) 0}
@@ -234,7 +219,9 @@ section{scroll-margin-top:12px}
 /* footer */
 .foot{border-top:var(--line) solid var(--sky-16);padding:30px 0;color:var(--mist-60)}
 .foot .wrap{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;justify-content:space-between}
-.foot-id{display:flex;align-items:center;gap:12px}
+.foot-id{display:flex;align-items:center;gap:12px;min-width:0}
+.foot-id .mono{line-height:1.8}
+.foot-id svg{flex:none}
 .foot svg{width:26px;height:26px;color:var(--straw)}
 
 /* ============ MOTION ============ */
@@ -278,7 +265,7 @@ section{scroll-margin-top:12px}
 
   <!-- 1. HERO -->
   <section class="hero haze" aria-labelledby="hero-title">
-    <div class="wrap hero-grid">
+    <div class="wrap">
       <div>
         <span class="kicker a-in" style="--d:0ms" data-i18n="hero.kicker">Available for projects</span>
         <h1 id="hero-title" class="a-in" style="--d:90ms">Maksim<br>Lebedev<span class="cur" aria-hidden="true"></span></h1>
@@ -289,21 +276,6 @@ section{scroll-margin-top:12px}
             <span data-i18n="hero.cta">Get in touch</span>
             <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5.33 16H25.85"/><path d="M17.23 7.79 26.67 16 17.23 24.21"/></g></svg>
           </a>
-        </div>
-      </div>
-
-      <div class="term a-in" style="--d:400ms" aria-label="Registration summary">
-        <div class="term-top mono"><span><i aria-hidden="true"></i>registry.txt</span><span>GE</span></div>
-        <div class="term-body">
-          <p class="term-cmd"><b>$</b>whois maksim-lebedev</p>
-          <dl>
-            <dt>name</dt><dd>Maksim Lebedev</dd>
-            <dt>status</dt><dd data-i18n="fact.status">Individual Entrepreneur</dd>
-            <dt>country</dt><dd data-i18n="fact.country">Georgia</dd>
-            <dt>city</dt><dd data-i18n="fact.city">Tbilisi</dd>
-            <dt>id</dt><dd class="hl">300484429</dd>
-            <dt>registered</dt><dd data-i18n="fact.date">21 September 2026</dd>
-          </dl>
         </div>
       </div>
     </div>
@@ -421,7 +393,7 @@ section{scroll-margin-top:12px}
   <div class="wrap">
     <div class="foot-id">
       <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="3.28" stroke-linecap="round" stroke-linejoin="round"><path d="M3.69 28.31H28.31V3.69H3.69Z"/><path d="M12.31 22.15V9.85M13.95 22.15V9.85M15.59 22.15V9.85M17.23 22.15V9.85M18.87 22.15V9.85"/></g></svg>
-      <span class="mono" data-i18n="foot.name">Maksim Lebedev · Individual Entrepreneur · ID 300484429</span>
+      <span class="mono" data-i18n="foot.name">Maksim Lebedev · Individual Entrepreneur, Georgia · ID&nbsp;300484429 · Registered 21&nbsp;September&nbsp;2026</span>
     </div>
     <span class="mono">© 2026</span>
   </div>
@@ -439,7 +411,6 @@ section{scroll-margin-top:12px}
       "hero.role": "Web developer & learning systems designer",
       "hero.sub": "Individual Entrepreneur · Tbilisi, Georgia",
       "hero.cta": "Get in touch",
-      "fact.status": "Individual Entrepreneur", "fact.country": "Georgia", "fact.city": "Tbilisi",
       "fact.date": "21 September 2026",
       "services.kicker": "What I do", "services.title": "Services",
       "s1.title": "Web development", "s1.i1": "Web applications", "s1.i2": "Landing pages", "s1.i3": "Internal tools",
@@ -460,7 +431,7 @@ section{scroll-margin-top:12px}
       "row.email": "Email", "row.location": "Location", "row.status": "Legal status",
       "row.id": "Identification number", "row.date": "Registration date",
       "val.location": "Tbilisi, Georgia", "val.status": "Individual Entrepreneur registered in Georgia",
-      "foot.name": "Maksim Lebedev · Individual Entrepreneur · ID 300484429"
+      "foot.name": "Maksim Lebedev · Individual Entrepreneur, Georgia · ID\u00a0300484429 · Registered 21\u00a0September\u00a02026"
     },
     ru: {
       "meta.title": "Maksim Lebedev — веб-разработчик и проектировщик обучающих систем",
@@ -469,7 +440,6 @@ section{scroll-margin-top:12px}
       "hero.role": "Веб-разработчик и проектировщик обучающих систем",
       "hero.sub": "Индивидуальный предприниматель · Тбилиси, Грузия",
       "hero.cta": "Написать",
-      "fact.status": "Индивидуальный предприниматель", "fact.country": "Грузия", "fact.city": "Тбилиси",
       "fact.date": "21 сентября 2026",
       "services.kicker": "Что я делаю", "services.title": "Услуги",
       "s1.title": "Веб-разработка", "s1.i1": "Веб-приложения", "s1.i2": "Лендинги", "s1.i3": "Внутренние инструменты",
@@ -490,7 +460,7 @@ section{scroll-margin-top:12px}
       "row.email": "Эл. почта", "row.location": "Локация", "row.status": "Правовой статус",
       "row.id": "Идентификационный номер", "row.date": "Дата регистрации",
       "val.location": "Тбилиси, Грузия", "val.status": "Индивидуальный предприниматель, зарегистрирован в Грузии",
-      "foot.name": "Maksim Lebedev · ИП · ID 300484429"
+      "foot.name": "Maksim Lebedev · ИП, Грузия · ID\u00a0300484429 · Дата регистрации 21\u00a0сентября\u00a02026"
     }
   };
 
