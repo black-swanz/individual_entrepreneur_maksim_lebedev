@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Maksim Lebedev — Web developer &amp; learning systems designer</title>
+<meta name="description" content="Maksim Lebedev, Individual Entrepreneur registered in Georgia. Web development, learning management systems and educational content design. Tbilisi, Georgia.">
+<meta property="og:title" content="Maksim Lebedev — Web developer & learning systems designer">
+<meta property="og:description" content="Individual Entrepreneur · Tbilisi, Georgia">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0A1512">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='2 2 28 28'%3E%3Cg fill='none' stroke='%238FD3E6' stroke-width='3.28' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.69 28.31H28.31V3.69H3.69Z'/%3E%3Cpath d='M12.31 22.15V9.85M13.95 22.15V9.85M15.59 22.15V9.85M17.23 22.15V9.85M18.87 22.15V9.85'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@500;700&family=Onest:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* M.S. Education — шрифты, встроенные в файл (base64, woff2).
+   Сгенерировано scripts/inline_fonts.py.
+   MSE Matrix — авторская гарнитура бренда (scripts/build_font.py).
+   Onest и Martian Mono — SIL OFL 1.1, тексты в assets/fonts/licenses/. */
+@font-face{font-family:'MSE Matrix';font-weight:700;font-style:normal;font-display:swap;src:url(data:font/woff2;base64,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) format('woff2')}
+@font-face{font-family:'MSE Matrix Dot';font-weight:400;font-style:normal;font-display:swap;src:url(data:font/woff2;base64,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) format('woff2')}
+
+
+/* ============ M.S. EDUCATION TOKENS ============ */
+:root{
+  --night:#0A1512;
+  --deep:#073B33;
+  --lake:#116E6B;
+  --sky:#8FD3E6;
+  --straw:#EACB7B;
+  --mist:#E9F2F2;
+  --white:#FFFFFF;
+
+  --sky-05:rgba(143,211,230,.05);
+  --sky-08:rgba(143,211,230,.08);
+  --sky-16:rgba(143,211,230,.16);
+  --sky-30:rgba(143,211,230,.30);
+  --mist-60:rgba(233,242,242,.60);
+  --mist-82:rgba(233,242,242,.82);
+  --night-12:rgba(10,21,18,.12);
+  --night-26:rgba(10,21,18,.26);
+  --night-55:rgba(10,21,18,.55);
+  --straw-20:rgba(234,203,123,.20);
+
+  --f-display:'MSE Matrix','Arial Narrow',sans-serif;
+  --f-dot:'MSE Matrix Dot','MSE Matrix',sans-serif;
+  --f-body:'Onest','Helvetica Neue',Arial,sans-serif;
+  --f-mono:'Martian Mono',ui-monospace,monospace;
+
+  --fs-body:clamp(17px,.32vw + 15.7px,19px);
+  --lh-body:1.7;
+  --measure:64ch;
+  --measure-wide:76ch;
+
+  --wrap:1120px;
+  --gap:clamp(20px,3.2vw,40px);
+  --stack:clamp(24px,2.6vw,40px);
+  --line:1.5px;
+  --rule:var(--line) solid var(--sky-30);
+  --rule-light:var(--line) solid var(--night-26);
+  --offset:5px;
+
+  --dur-fast:120ms;
+  --dur:220ms;
+  --dur-slow:400ms;
+  --ease:cubic-bezier(.2,.7,.3,1);
+  --step-4:steps(4,end);
+  --step-6:steps(6,end);
+}
+
+/* ============ BASE ============ */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--f-body);font-size:var(--fs-body);line-height:var(--lh-body);
+  background:var(--night);color:var(--mist);-webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:inherit}
+svg{display:block}
+
+h1,h2,h3,.display{font-family:var(--f-display);font-weight:700;text-transform:uppercase;
+  line-height:.98;letter-spacing:.005em;color:var(--sky);text-wrap:balance}
+h1{font-size:clamp(40px,6.4vw,78px)}
+h2{font-size:clamp(28px,3.4vw,40px)}
+h3{font-size:clamp(21px,2vw,26px)}
+
+.kicker{font-family:var(--f-dot);font-size:18px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--straw);display:block}
+.mono{font-family:var(--f-mono);font-weight:500;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.lead{font-size:clamp(19px,1.6vw,23px);line-height:1.5;color:var(--mist-82)}
+
+@keyframes blink{0%,55%{opacity:1}56%,100%{opacity:0}}
+.cur{display:inline-block;width:.44em;height:.86em;background:currentColor;
+  vertical-align:-.04em;margin-left:.14em;animation:blink 1.1s steps(1,end) infinite}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gap)}
+section{scroll-margin-top:12px}
+
+/* textures */
+.scan,.haze{position:relative}
+.scan::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(180deg,var(--sky-05) 0 1px,transparent 1px 6px)}
+.haze::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(var(--sky-16) 1px,transparent 1px);background-size:16px 16px;
+  -webkit-mask-image:radial-gradient(120% 90% at 78% 8%,#000 0%,transparent 72%);
+          mask-image:radial-gradient(120% 90% at 78% 8%,#000 0%,transparent 72%)}
+.scan > *,.haze > *{position:relative}
+
+/* light mode */
+.light{background:var(--mist);color:var(--night)}
+.light h2,.light h3{color:var(--deep)}
+.light .kicker{color:var(--lake)}
+
+.prose{max-width:var(--measure)}
+.prose > * + *{margin-top:1.05em}
+
+/* focus */
+:focus-visible{outline:2px solid var(--straw);outline-offset:3px}
+.light :focus-visible{outline-color:var(--lake)}
+
+/* ============ HEADER ============ */
+.head{display:flex;align-items:center;justify-content:space-between;gap:24px;
+  max-width:var(--wrap);margin:0 auto;padding:calc(16px + env(safe-area-inset-top,0px)) var(--gap) 16px}
+.head-bar{border-bottom:var(--line) solid var(--sky-16)}
+.logo{display:inline-flex;align-items:center;gap:11px;text-decoration:none}
+.logo svg{width:30px;height:30px;color:var(--straw);flex:none}
+.logo b{font-family:var(--f-display);font-weight:700;font-size:21px;
+  text-transform:uppercase;letter-spacing:.02em;color:var(--mist)}
+.nav{display:flex;align-items:center;gap:24px}
+.nav a{color:var(--sky);text-decoration:none;font-size:15px}
+.nav a:hover{color:var(--straw)}
+.lang{display:flex;border:var(--rule)}
+.lang button{font-family:var(--f-mono);font-weight:700;font-size:12px;letter-spacing:.1em;
+  background:transparent;color:var(--mist-60);border:0;padding:7px 11px;cursor:pointer;
+  transition:background var(--dur-fast) var(--ease),color var(--dur-fast) var(--ease)}
+.lang button + button{border-left:var(--rule)}
+.lang button:hover{color:var(--sky)}
+.lang button[aria-pressed="true"]{background:var(--sky);color:var(--night)}
+@media(max-width:820px){.nav .links{display:none}}
+.links{display:flex;gap:24px}
+
+/* ============ BUTTONS ============ */
+.btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--f-mono);font-weight:700;
+  font-size:14px;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;
+  padding:15px 24px;border:0;cursor:pointer;background:var(--sky);color:var(--night);
+  box-shadow:var(--offset) var(--offset) 0 var(--lake);
+  transition:transform var(--dur-fast) var(--ease),box-shadow var(--dur-fast) var(--ease),background var(--dur-fast) var(--ease)}
+.btn svg{width:18px;height:18px}
+.btn:hover{background:var(--straw)}
+.btn:active{transform:translate(var(--offset),var(--offset));box-shadow:0 0 0 var(--lake)}
+
+/* ============ HERO ============ */
+.hero{padding:clamp(56px,9vw,112px) 0 clamp(56px,8vw,96px)}
+.hero-grid{display:grid;gap:clamp(40px,5vw,64px);align-items:center;grid-template-columns:minmax(0,1fr)}
+@media(min-width:960px){.hero-grid{grid-template-columns:1.15fr .85fr}}
+.hero .kicker{margin-bottom:22px}
+.hero h1{margin-bottom:26px}
+.hero .lead{max-width:30ch;color:var(--mist)}
+.hero .sub{display:block;margin-top:16px;color:var(--mist-60);font-size:13px}
+.row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:36px}
+
+/* terminal panel */
+.term{background:var(--deep);border:var(--rule);box-shadow:var(--offset) var(--offset) 0 var(--lake);min-width:0}
+.term-top{display:flex;justify-content:space-between;gap:12px;padding:10px 16px;border-bottom:var(--rule);color:var(--mist-60)}
+.term-top i{display:inline-block;width:9px;height:9px;background:var(--straw);margin-right:8px;vertical-align:1px}
+.term-body{padding:18px 18px 22px;font-family:var(--f-mono);font-size:13px;line-height:1.9}
+.term-cmd{color:var(--sky);margin-bottom:8px}
+.term-cmd b{color:var(--straw);font-weight:700;margin-right:8px}
+.term dl{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:18px}
+.term dt{color:var(--mist-60);text-transform:lowercase}
+.term dd{color:var(--mist);overflow-wrap:anywhere}
+.term dd.hl{color:var(--straw)}
+@media(max-width:420px){.term dl{grid-template-columns:minmax(0,1fr)}.term dd{margin-bottom:8px}}
+
+/* ============ SECTIONS ============ */
+.sec{padding:clamp(64px,9vw,112px) 0}
+.sec-head{margin-bottom:clamp(32px,4vw,48px)}
+.sec-head .kicker{margin-bottom:16px}
+.deep{background:var(--deep);border-top:var(--rule);border-bottom:var(--rule)}
+
+/* services */
+.cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr))}
+.card{border:var(--rule);background:var(--sky-08);padding:28px 26px 30px;display:flex;flex-direction:column;
+  transition:border-color var(--dur) var(--ease),background var(--dur) var(--ease)}
+.card:hover{border-color:var(--sky);background:transparent}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px}
+.card-top .mono{color:var(--straw);font-weight:700}
+.card svg{width:44px;height:44px;color:var(--sky)}
+.card h3{margin-bottom:18px}
+.card ul{list-style:none;border-top:var(--line) solid var(--sky-16)}
+.card li{position:relative;padding:10px 0 10px 22px;font-size:16px;line-height:1.5;color:var(--mist-82);
+  border-bottom:var(--line) solid var(--sky-16)}
+.card li::before{content:"";position:absolute;left:0;top:1.02em;width:8px;height:8px;background:var(--sky)}
+
+/* process */
+.route{list-style:none;border-top:var(--rule)}
+.route li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:8px 20px;align-items:baseline;
+  padding:22px 0;border-bottom:var(--line) solid var(--sky-16)}
+@media(min-width:820px){.route li{grid-template-columns:88px minmax(0,1.1fr) minmax(0,1fr)}}
+.route i{font-family:var(--f-display);font-weight:700;font-style:normal;font-size:clamp(26px,2.6vw,34px);
+  color:var(--straw);line-height:1}
+.route h3{color:var(--sky)}
+.route p{font-size:17px;color:var(--mist-60);grid-column:2}
+@media(min-width:820px){.route p{grid-column:3}}
+
+/* background (light) */
+.light.sec .sec-head{margin-bottom:28px}
+.about{display:grid;gap:var(--gap);grid-template-columns:minmax(0,1fr)}
+@media(min-width:900px){.about{grid-template-columns:.8fr 1.2fr;align-items:start}}
+.about .prose{font-size:clamp(18px,1.3vw,20px)}
+
+/* contact */
+.contact-grid{display:grid;gap:clamp(40px,5vw,64px);grid-template-columns:minmax(0,1fr)}
+@media(min-width:900px){.contact-grid{grid-template-columns:1fr 1fr;align-items:start}}
+.contact h2{margin-bottom:26px;font-size:clamp(34px,4.6vw,56px)}
+.email{display:inline-block;margin-top:22px;font-family:var(--f-mono);font-weight:500;font-size:clamp(14px,1.5vw,17px);
+  color:var(--sky);text-decoration:underline;text-underline-offset:.3em;text-decoration-thickness:1.5px;overflow-wrap:anywhere}
+.email:hover{color:var(--straw)}
+.facts{width:100%;border-collapse:collapse;border-top:var(--rule)}
+.facts th{font-family:var(--f-mono);font-weight:500;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--mist-60);text-align:left;vertical-align:top;padding:16px 16px 16px 0;width:42%;
+  border-bottom:var(--line) solid var(--sky-16)}
+.facts td{padding:14px 0;border-bottom:var(--line) solid var(--sky-16);font-size:17px;vertical-align:top;overflow-wrap:anywhere}
+.facts td.num{font-family:var(--f-mono);font-weight:700;font-size:15px;color:var(--straw);letter-spacing:.06em}
+.facts a{color:var(--sky);text-decoration:none}
+@media(max-width:560px){
+  .facts tr{display:block;border-bottom:var(--line) solid var(--sky-16);padding:14px 0}
+  .facts th,.facts td{display:block;width:auto;padding:0;border:0}
+  .facts th{margin-bottom:4px}
+}
+.facts a:hover{color:var(--straw)}
+
+/* footer */
+.foot{border-top:var(--line) solid var(--sky-16);padding:30px 0;color:var(--mist-60)}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;justify-content:space-between}
+.foot-id{display:flex;align-items:center;gap:12px}
+.foot svg{width:26px;height:26px;color:var(--straw)}
+
+/* ============ MOTION ============ */
+@keyframes glow-in{0%{opacity:0}100%{opacity:1}}
+.a-in{animation:glow-in var(--dur-slow) var(--step-4) both;animation-delay:var(--d,0ms)}
+.will-in{opacity:0}
+.will-in.is-in{opacity:1;transition:opacity var(--dur-slow) var(--step-4) var(--d,0ms)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;scroll-behavior:auto !important}
+  .cur{opacity:1}
+  .a-in{animation:none !important;opacity:1}
+}
+</style>
+</head>
+<body>
+
+<div class="head-bar">
+  <header class="head">
+    <a class="logo" href="#top" aria-label="Maksim Lebedev">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="3.28" stroke-linecap="round" stroke-linejoin="round"><path d="M3.69 28.31H28.31V3.69H3.69Z"/><path d="M12.31 22.15V9.85M13.95 22.15V9.85M15.59 22.15V9.85M17.23 22.15V9.85M18.87 22.15V9.85"/></g></svg>
+      <b>Maksim Lebedev</b>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <div class="links">
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#process" data-i18n="nav.process">Process</a>
+        <a href="#background" data-i18n="nav.background">Background</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 1. HERO -->
+  <section class="hero haze" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker a-in" style="--d:0ms" data-i18n="hero.kicker">Available for projects</span>
+        <h1 id="hero-title" class="a-in" style="--d:90ms">Maksim<br>Lebedev<span class="cur" aria-hidden="true"></span></h1>
+        <p class="lead a-in" style="--d:180ms" data-i18n="hero.role">Web developer &amp; learning systems designer</p>
+        <span class="sub mono a-in" style="--d:240ms" data-i18n="hero.sub">Individual Entrepreneur · Tbilisi, Georgia</span>
+        <div class="row a-in" style="--d:320ms">
+          <a class="btn" href="mailto:maxmorlan97@gmail.com">
+            <span data-i18n="hero.cta">Get in touch</span>
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5.33 16H25.85"/><path d="M17.23 7.79 26.67 16 17.23 24.21"/></g></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="term a-in" style="--d:400ms" aria-label="Registration summary">
+        <div class="term-top mono"><span><i aria-hidden="true"></i>registry.txt</span><span>GE</span></div>
+        <div class="term-body">
+          <p class="term-cmd"><b>$</b>whois maksim-lebedev</p>
+          <dl>
+            <dt>name</dt><dd>Maksim Lebedev</dd>
+            <dt>status</dt><dd data-i18n="fact.status">Individual Entrepreneur</dd>
+            <dt>country</dt><dd data-i18n="fact.country">Georgia</dd>
+            <dt>city</dt><dd data-i18n="fact.city">Tbilisi</dd>
+            <dt>id</dt><dd class="hl">300484429</dd>
+            <dt>registered</dt><dd data-i18n="fact.date">21 September 2026</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SERVICES -->
+  <section class="sec scan" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="kicker" data-i18n="services.kicker">What I do</span>
+        <h2 id="services-title" data-i18n="services.title">Services</h2>
+      </div>
+      <div class="cards">
+        <article class="card" data-reveal style="--d:0ms">
+          <div class="card-top">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="3.28" stroke-linecap="round" stroke-linejoin="round"><path d="M6.15 25.85V6.15M16 25.85V6.15M25.85 25.85V6.15M6.15 25.85H25.85M6.15 16H25.85M6.15 6.15H25.85"/></g></svg>
+            <span class="mono">01</span>
+          </div>
+          <h3 data-i18n="s1.title">Web development</h3>
+          <ul>
+            <li data-i18n="s1.i1">Web applications</li>
+            <li data-i18n="s1.i2">Landing pages</li>
+            <li data-i18n="s1.i3">Internal tools</li>
+          </ul>
+        </article>
+        <article class="card" data-reveal style="--d:90ms">
+          <div class="card-top">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6.56 6.56H14.36L19.69 11.9V20.1L25.44 25.44" stroke="currentColor" stroke-width="3.28" stroke-linecap="round" stroke-linejoin="round"/><g fill="currentColor"><circle cx="6.56" cy="6.56" r="1.64"/><circle cx="25.44" cy="25.44" r="1.64"/><circle cx="19.69" cy="16" r="1.64"/></g></svg>
+            <span class="mono">02</span>
+          </div>
+          <h3 data-i18n="s2.title">Learning management systems</h3>
+          <ul>
+            <li data-i18n="s2.i1">User accounts</li>
+            <li data-i18n="s2.i2">Online testing with timers</li>
+            <li data-i18n="s2.i3">Progress tracking</li>
+            <li data-i18n="s2.i4">Reporting</li>
+            <li data-i18n="s2.i5">Integrations with business systems</li>
+          </ul>
+        </article>
+        <article class="card" data-reveal style="--d:180ms">
+          <div class="card-top">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="3.28" stroke-linecap="round" stroke-linejoin="round"><path d="M5.33 7.79H13.54L16 4.92V25.44L13.54 22.56H5.33Z"/><path d="M26.67 7.79H18.46L16 4.92"/><path d="M26.67 7.79V22.56H18.46L16 25.44"/></g></svg>
+            <span class="mono">03</span>
+          </div>
+          <h3 data-i18n="s3.title">Educational content</h3>
+          <ul>
+            <li data-i18n="s3.i1">Corporate training programs</li>
+            <li data-i18n="s3.i2">Training manuals</li>
+            <li data-i18n="s3.i3">Communication standards</li>
+            <li data-i18n="s3.i4">Practical assignments</li>
+            <li data-i18n="s3.i5">Assessment materials</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. HOW I WORK -->
+  <section class="sec deep" id="process" aria-labelledby="process-title">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="kicker" data-i18n="process.kicker">From brief to launch</span>
+        <h2 id="process-title" data-i18n="process.title">How I work</h2>
+      </div>
+      <ol class="route">
+        <li data-reveal style="--d:0ms"><i>01</i><h3 data-i18n="p1.title">Scoping and requirements</h3><p data-i18n="p1.text">We agree on goals, users, constraints and what is in scope.</p></li>
+        <li data-reveal style="--d:90ms"><i>02</i><h3 data-i18n="p2.title">Development</h3><p data-i18n="p2.text">The product is built step by step, with working previews along the way.</p></li>
+        <li data-reveal style="--d:180ms"><i>03</i><h3 data-i18n="p3.title">Delivery</h3><p data-i18n="p3.text">You receive the result in editable and deployable formats.</p></li>
+        <li data-reveal style="--d:270ms"><i>04</i><h3 data-i18n="p4.title">Iteration and support</h3><p data-i18n="p4.text">Changes, fixes and further development after launch.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 4. BACKGROUND -->
+  <section class="sec light" id="background" aria-labelledby="background-title">
+    <div class="wrap about">
+      <div class="sec-head">
+        <span class="kicker" data-i18n="bg.kicker">About</span>
+        <h2 id="background-title" data-i18n="bg.title">Background</h2>
+      </div>
+      <div class="prose">
+        <p data-i18n="bg.p1">My background is in corporate training and the development of educational products. Much of this work has been done with customer service teams.</p>
+        <p data-i18n="bg.p2">In 2026 I moved into independent practice, bringing web development and learning design together.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CONTACT -->
+  <section class="sec contact haze" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact-grid">
+      <div data-reveal>
+        <span class="kicker" data-i18n="contact.kicker">Your move</span>
+        <h2 id="contact-title"><span data-i18n="contact.title">Let’s talk</span><span class="cur" aria-hidden="true"></span></h2>
+        <a class="btn" href="mailto:maxmorlan97@gmail.com"><span data-i18n="contact.cta">Write an email</span>
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5.33 16H25.85"/><path d="M17.23 7.79 26.67 16 17.23 24.21"/></g></svg>
+        </a>
+        <br><a class="email" href="mailto:maxmorlan97@gmail.com">maxmorlan97@gmail.com</a>
+      </div>
+      <table class="facts" data-reveal style="--d:90ms">
+        <caption class="mono" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)" data-i18n="contact.caption">Contact and registration details</caption>
+        <tbody>
+          <tr><th scope="row" data-i18n="row.email">Email</th><td><a href="mailto:maxmorlan97@gmail.com">maxmorlan97@gmail.com</a></td></tr>
+          <tr><th scope="row" data-i18n="row.location">Location</th><td data-i18n="val.location">Tbilisi, Georgia</td></tr>
+          <tr><th scope="row" data-i18n="row.status">Legal status</th><td data-i18n="val.status">Individual Entrepreneur registered in Georgia</td></tr>
+          <tr><th scope="row" data-i18n="row.id">Identification number</th><td class="num">300484429</td></tr>
+          <tr><th scope="row" data-i18n="row.date">Registration date</th><td data-i18n="fact.date">21 September 2026</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-id">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="3.28" stroke-linecap="round" stroke-linejoin="round"><path d="M3.69 28.31H28.31V3.69H3.69Z"/><path d="M12.31 22.15V9.85M13.95 22.15V9.85M15.59 22.15V9.85M17.23 22.15V9.85M18.87 22.15V9.85"/></g></svg>
+      <span class="mono" data-i18n="foot.name">Maksim Lebedev · Individual Entrepreneur · ID 300484429</span>
+    </div>
+    <span class="mono">© 2026</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  var DICT = {
+    en: {
+      "meta.title": "Maksim Lebedev — Web developer & learning systems designer",
+      "nav.services": "Services", "nav.process": "Process", "nav.background": "Background", "nav.contact": "Contact",
+      "hero.kicker": "Available for projects",
+      "hero.role": "Web developer & learning systems designer",
+      "hero.sub": "Individual Entrepreneur · Tbilisi, Georgia",
+      "hero.cta": "Get in touch",
+      "fact.status": "Individual Entrepreneur", "fact.country": "Georgia", "fact.city": "Tbilisi",
+      "fact.date": "21 September 2026",
+      "services.kicker": "What I do", "services.title": "Services",
+      "s1.title": "Web development", "s1.i1": "Web applications", "s1.i2": "Landing pages", "s1.i3": "Internal tools",
+      "s2.title": "Learning management systems", "s2.i1": "User accounts", "s2.i2": "Online testing with timers",
+      "s2.i3": "Progress tracking", "s2.i4": "Reporting", "s2.i5": "Integrations with business systems",
+      "s3.title": "Educational content", "s3.i1": "Corporate training programs", "s3.i2": "Training manuals",
+      "s3.i3": "Communication standards", "s3.i4": "Practical assignments", "s3.i5": "Assessment materials",
+      "process.kicker": "From brief to launch", "process.title": "How I work",
+      "p1.title": "Scoping and requirements", "p1.text": "We agree on goals, users, constraints and what is in scope.",
+      "p2.title": "Development", "p2.text": "The product is built step by step, with working previews along the way.",
+      "p3.title": "Delivery", "p3.text": "You receive the result in editable and deployable formats.",
+      "p4.title": "Iteration and support", "p4.text": "Changes, fixes and further development after launch.",
+      "bg.kicker": "About", "bg.title": "Background",
+      "bg.p1": "My background is in corporate training and the development of educational products. Much of this work has been done with customer service teams.",
+      "bg.p2": "In 2026 I moved into independent practice, bringing web development and learning design together.",
+      "contact.kicker": "Your move", "contact.title": "Let’s talk", "contact.cta": "Write an email",
+      "contact.caption": "Contact and registration details",
+      "row.email": "Email", "row.location": "Location", "row.status": "Legal status",
+      "row.id": "Identification number", "row.date": "Registration date",
+      "val.location": "Tbilisi, Georgia", "val.status": "Individual Entrepreneur registered in Georgia",
+      "foot.name": "Maksim Lebedev · Individual Entrepreneur · ID 300484429"
+    },
+    ru: {
+      "meta.title": "Maksim Lebedev — веб-разработчик и проектировщик обучающих систем",
+      "nav.services": "Услуги", "nav.process": "Процесс", "nav.background": "Опыт", "nav.contact": "Контакты",
+      "hero.kicker": "Открыт для проектов",
+      "hero.role": "Веб-разработчик и проектировщик обучающих систем",
+      "hero.sub": "Индивидуальный предприниматель · Тбилиси, Грузия",
+      "hero.cta": "Написать",
+      "fact.status": "Индивидуальный предприниматель", "fact.country": "Грузия", "fact.city": "Тбилиси",
+      "fact.date": "21 сентября 2026",
+      "services.kicker": "Что я делаю", "services.title": "Услуги",
+      "s1.title": "Веб-разработка", "s1.i1": "Веб-приложения", "s1.i2": "Лендинги", "s1.i3": "Внутренние инструменты",
+      "s2.title": "Системы управления обучением", "s2.i1": "Личные кабинеты пользователей", "s2.i2": "Онлайн-тестирование с таймером",
+      "s2.i3": "Отслеживание прогресса", "s2.i4": "Отчётность", "s2.i5": "Интеграции с бизнес-системами",
+      "s3.title": "Учебный контент", "s3.i1": "Корпоративные программы обучения", "s3.i2": "Учебные пособия",
+      "s3.i3": "Стандарты коммуникации", "s3.i4": "Практические задания", "s3.i5": "Материалы для оценки",
+      "process.kicker": "От задачи к запуску", "process.title": "Как я работаю",
+      "p1.title": "Задача и требования", "p1.text": "Договариваемся о целях, пользователях, ограничениях и объёме работ.",
+      "p2.title": "Разработка", "p2.text": "Продукт собирается поэтапно, с рабочими версиями по ходу.",
+      "p3.title": "Передача", "p3.text": "Результат — в редактируемом виде и готовым к развёртыванию.",
+      "p4.title": "Доработка и поддержка", "p4.text": "Изменения, исправления и развитие после запуска.",
+      "bg.kicker": "О практике", "bg.title": "Опыт",
+      "bg.p1": "Мой опыт — корпоративное обучение и разработка образовательных продуктов. Большая часть этой работы связана с клиентскими сервисами.",
+      "bg.p2": "В 2026 году я перешёл в самостоятельную практику и объединил веб-разработку с проектированием обучения.",
+      "contact.kicker": "Ваш ход", "contact.title": "Напишите мне", "contact.cta": "Написать письмо",
+      "contact.caption": "Контакты и регистрационные данные",
+      "row.email": "Эл. почта", "row.location": "Локация", "row.status": "Правовой статус",
+      "row.id": "Идентификационный номер", "row.date": "Дата регистрации",
+      "val.location": "Тбилиси, Грузия", "val.status": "Индивидуальный предприниматель, зарегистрирован в Грузии",
+      "foot.name": "Maksim Lebedev · ИП · ID 300484429"
+    }
+  };
+
+  var nodes = document.querySelectorAll("[data-i18n]");
+  var buttons = document.querySelectorAll(".lang button");
+
+  function apply(lang){
+    var d = DICT[lang] || DICT.en;
+    for (var i = 0; i < nodes.length; i++){
+      var k = nodes[i].getAttribute("data-i18n");
+      if (d[k] != null) nodes[i].textContent = d[k];
+    }
+    document.documentElement.lang = lang;
+    document.title = d["meta.title"];
+    for (var j = 0; j < buttons.length; j++){
+      buttons[j].setAttribute("aria-pressed", String(buttons[j].getAttribute("data-lang") === lang));
+    }
+  }
+
+  function save(lang){ try { localStorage.setItem("lang", lang); } catch (e) {} }
+  function load(){ try { return localStorage.getItem("lang"); } catch (e) { return null; } }
+
+  var q = new URLSearchParams(location.search).get("lang");
+  var initial = (q === "ru" || q === "en") ? q : (load() === "ru" ? "ru" : "en");
+  if (initial !== "en") apply(initial);
+
+  for (var b = 0; b < buttons.length; b++){
+    buttons[b].addEventListener("click", function(){
+      var lang = this.getAttribute("data-lang");
+      apply(lang); save(lang);
+    });
+  }
+
+  /* scroll reveal — content stays visible without JS or with reduced motion */
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduce && "IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (!e.isIntersecting) return;
+        e.target.classList.add("is-in"); io.unobserve(e.target);
+      });
+    }, {rootMargin: "0px 0px -8% 0px", threshold: .1});
+    document.querySelectorAll("[data-reveal]").forEach(function(el){
+      el.classList.add("will-in"); io.observe(el);
+    });
+  }
+})();
+</script>
+</body>
+</html>
